@@ -6,8 +6,8 @@
  * Eng yomon xolat uchun algoritm murakkabligi: O(n^2)
  * Eng yaxshi uchun algoritm murakkabligi: O(n^2)
  *
- * Bu tartiblash algoritmida massivni tartiblanmagan qismidan eng kichik 
- * elementni topib uni 
+ * Bu tartiblash algoritmida massivni tartiblanmagan qismidan ushbu o'ringa mos 
+ * keladigan elementni topib uni joylashtirib borishdan iborat
  */
 
 #include <iostream>
@@ -35,15 +35,23 @@ void selectionSort(int array[], int size) {
 	// Chunki undan oldingi barcha elementlar algoritm orqali tartiblab 
 	// bo'linganida oxirgi element ham o'z o'rnini topgan bo'ladi
 	for (int i = 0; i < size - 1; i++) {
-		// Massivni joriy o'rniga joylashtiriladigan element indeksi
+		// Massivni joriy o'rniga joylashtiriladigan element indeksi. Dastlab 
+		// joriy element indeksini olamiz va massivni qolgan qismi bo'yicha bu
+		// o'ringa yana ham mosroq elementni izlaymiz. Agar topilsa shu 
+		// o'zgaruvchiga o'zlashtiramiz
 		int indexToSwap = i;
 
+		// Massivni saralanmagan qismidan bu o'ringa mos elementni izlaymiz
 		for (int j = i + 1; j < size; j++) {
+			// Izlanayotgan elementdan kichikrog'i uchrab qolsa uni indeksini 
+			// olamiz
 			if (array[indexToSwap] > array[j]) {
 				indexToSwap = j;
 			}
 		}
 
+		// Agar tanlangan element joriy element emas boshqa bo'lsa ularni
+		// o'rnini almashtiramiz
 		if (indexToSwap != i) {
 			swap(array[indexToSwap], array[i]);
 		}
