@@ -56,7 +56,6 @@ void bubbleSort(int array[], int size) {
 
 				// Almashtirish bajarilganligini belgilab qo'yamiz
 				swapped = true;
-				printArray(array, size);
 			}
 		}
 
