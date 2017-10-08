@@ -43,7 +43,7 @@ void cocktailSort(int array[], int size) {
 		// Massivni o'ngga qarab saralaymiz. Bunda huddi pufakchali tartiblash 
 		// kabi elementlar o'zlarini yonida turgan elementlar bilan taqqoslanib
 		// lozim topilsa o'rinlari almashtiriladi
-		for (int i = left; i < size; i++) {
+		for (int i = left; i < right; i++) {
 			if (array[i] > array[i + 1]) {
 				swap(array[i], array[i + 1]);
 			}

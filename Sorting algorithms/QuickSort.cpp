@@ -65,7 +65,7 @@ void quickSort(int array[], int start, int end) {
 	// Asos elementimiz ushbu massivda o'zini o'rnini topdi. Endi asos 
 	// elementdan chap va o'ng tomonda turgan submassivlarni (asos elementni 
 	// o'zini kiritmagan holda) ham rekursiv tartiblab yuboramiz
-	
+
 	// Chap tomonda turgan submassivni tartiblash
 	quickSort(array, start, lowerItems - 1);
 

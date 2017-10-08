@@ -19,6 +19,7 @@ using namespace std;
 // List elementi uchun struktura. Har bir list elementi o'ziga berilgan qiymat
 // va o'zidan keladigan elementga ko'rsatkich saqlaydi
 struct ListItem {
+public:
 	int data;
 	ListItem* next;
 
